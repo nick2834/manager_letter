@@ -7,6 +7,7 @@
       action="https://jsonplaceholder.typicode.com/posts/"
       multiple
       :on-preview="handlePreview"
+      accept=".xls,.xlsx"
     >
       <i class="el-icon-upload"></i>
       <div class="el-upload__text">
