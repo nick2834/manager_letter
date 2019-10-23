@@ -1,0 +1,27 @@
+.el-drawer__body{
+    padding: 20px;
+}
+.upload-content {
+    width: 100%;
+
+    .el-upload {
+        width: 100%;
+
+        .el-upload-dragger {
+            width: inherit;
+        }
+    }
+}
+.el-dialog__header-bg{
+    .el-dialog__header{
+        background: #f0f0f0;
+        text-align: center;
+        padding: 15px 0;
+        span{
+            font-size: 16px;
+        }
+    }
+    .el-select{
+        width: 100%;
+    }
+}
