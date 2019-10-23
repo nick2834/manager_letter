@@ -96,7 +96,7 @@
 </template>
 
 <script>
-import { formatJson } from "@/utils";
+import { formatJson,deepClone } from "@/utils";
 import lawyerDialog from "./component/lawyerDialog";
 import uploadDialog from "./component/uploadDialog";
 export default {
@@ -213,7 +213,10 @@ export default {
             "createtime",
             "status"
           ];
-          const list = this.dataList;
+          const list = deepClone(this.dataList);
+          list.map(item => {
+            item.status ? (item.status = "已删除") : (item.status = "未删除");
+          });
           const data = formatJson(filterVal, list);
           excel.export_json_to_excel({
             header: tHeader,
