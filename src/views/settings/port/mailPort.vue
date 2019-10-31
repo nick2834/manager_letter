@@ -3,7 +3,13 @@
   <el-form ref="form" :model="sizeForm" label-position="top">
     <el-form-item label="邮箱功能开关：">
       <el-col :span="6">
-        <el-switch v-model="sizeForm.isOpen" active-color="#108ee9" inactive-color="#ff4949"></el-switch>
+        <el-switch
+          v-model="sizeForm.isOpen"
+          active-color="#108ee9"
+          class="switchStyle"
+          active-text="开"
+          inactive-text="关"
+        ></el-switch>
       </el-col>
     </el-form-item>
     <el-form-item label="邮箱接口地址：">

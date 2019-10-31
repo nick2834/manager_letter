@@ -6,7 +6,6 @@
         <el-switch
           v-model="sizeForm.isOpen"
           active-color="#108ee9"
-          inactive-color="#ff4949"
           class="switchStyle"
           active-text="开"
           inactive-text="关"

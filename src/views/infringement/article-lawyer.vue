@@ -74,8 +74,11 @@
       <el-table-column label="操作" fixed="right" width="160">
         <template slot-scope="scope">
           <el-button type="text">查看</el-button>
-          <el-button type="text" :disabled="scope.row.status">发函</el-button>
-          <!-- <el-button type="text">删除</el-button> -->
+          <el-button
+            type="text"
+            :disabled="scope.row.status"
+            @click.native="handleSend(scope.row)"
+          >发函</el-button>
           <el-button type="text" @click="handleLawyer(scope.row)">转律师</el-button>
         </template>
       </el-table-column>
@@ -96,7 +99,7 @@
 </template>
 
 <script>
-import { formatJson,deepClone } from "@/utils";
+import { formatJson, deepClone } from "@/utils";
 import lawyerDialog from "./component/lawyerDialog";
 import uploadDialog from "./component/uploadDialog";
 export default {
@@ -227,6 +230,14 @@ export default {
           });
         });
       }
+    },
+    // 发函
+    handleSend(e) {
+      console.log(e);
+      this.$router.push({
+        name: "first-edit",
+        params: e
+      });
     }
   }
 };

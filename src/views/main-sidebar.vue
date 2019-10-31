@@ -16,9 +16,13 @@
             <icon-svg name="shoucang" class="site-sidebar__menu-icon"></icon-svg>
             <span>侵权中心</span>
           </template>
-          <el-menu-item index="infringement-article" @click="$router.push({ name: 'infringement-article' })">
+          <el-menu-item index="infringement-article-legal" @click="$router.push({ name: 'infringement-article-legal' })">
             <icon-svg name="tubiao" class="site-sidebar__menu-icon"></icon-svg>
-            <span slot="title">文章列表</span>
+            <span slot="title">文章列表-法务</span>
+          </el-menu-item>
+          <el-menu-item index="infringement-article-lawyer" @click="$router.push({ name: 'infringement-article-lawyer' })">
+            <icon-svg name="tubiao" class="site-sidebar__menu-icon"></icon-svg>
+            <span slot="title">文章列表-律师</span>
           </el-menu-item>
         </el-submenu>
         <el-submenu index="defend">

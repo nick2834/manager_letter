@@ -35,7 +35,9 @@ const mainRoutes = {
     // 提示: 如需要通过iframe嵌套展示内容, 但不通过tab打开, 请自行创建组件使用iframe处理!
     { path: '/home', component: _import('common/home'), name: 'home', meta: { title: '首页' } },
     { path: '/theme', component: _import('common/theme'), name: 'theme', meta: { title: '主题' } },
-    { path: '/infringement-article', component: _import('infringement/article'), name: 'infringement-article', meta: { title: '文章列表', isTab: true } },
+    { path: '/infringement-article-lawyer', component: _import('infringement/article-lawyer'), name: 'infringement-article-lawyer', meta: { title: '文章列表-律师', isTab: true } },
+    { path: '/infringement-article-legal', component: _import('infringement/article-legal'), name: 'infringement-article-legal', meta: { title: '文章列表-法务', isTab: true } },
+    { path: '/infringement-first-edit', component: _import('infringement/first-edit'), name: 'first-edit', meta: { title: '发函' } },
     { path: '/defend-lawyer', component: _import('defend/lawyer'), name: 'defend-lawyer', meta: { title: '律师信息', isTab: true } },
     { path: '/defend-platform', component: _import('defend/platform'), name: 'defend-platform', meta: { title: '平台信息', isTab: true } },
     { path: '/defend-echarts', component: _import('defend/echarts'), name: 'defend-echarts', meta: { title: 'defend-echarts', isTab: true } },
