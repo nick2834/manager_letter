@@ -16,8 +16,8 @@
     </el-form>
     <el-row :gutter="20" class="tool_bar">
       <el-row :span="24">
-        <el-button type="primary" icon="el-icon-plus">新增</el-button>
-        <el-button type="primary" icon="el-icon-upload2">导入</el-button>
+        <el-button type="primary" icon="el-icon-plus" @click="handleAddCom">新增</el-button>
+        <el-button type="primary" icon="el-icon-upload2" @click="handleUpload">导入</el-button>
       </el-row>
     </el-row>
     <el-table :data="dataList" style="width: 100%" border>
@@ -25,12 +25,12 @@
       <el-table-column prop="id" label="序号" width="80"></el-table-column>
       <el-table-column prop="company" label="公司名称" width="280"></el-table-column>
       <el-table-column prop="email" label="邮箱" width="280"></el-table-column>
-      <el-table-column prop="platform" label="网络平台" sortable width="180"></el-table-column>
+      <el-table-column prop="platform" label="网络平台" width="180"></el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
-          <el-button type="text">新增</el-button>
+          <el-button type="text" @click.native="handleAdd(scope.row)">新增</el-button>
           <el-button type="text">查看</el-button>
-          <el-button type="text">删除</el-button>
+          <el-button type="text" @click.native="handleDel(scope.row)">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -43,10 +43,17 @@
       :total="totalPage"
       layout="total, sizes, prev, pager, next, jumper"
     ></el-pagination>
+
+    <platform-dialog ref="platform" />
+    <company-dialog ref="company" />
+    <upload-dialog ref="upload" />
   </section>
 </template>
 
 <script>
+import platformDialog from "./component/platformDialog";
+import companyDialog from "./component/companyDialog";
+import uploadDialog from "./component/uploadDialog";
 export default {
   data() {
     return {
@@ -60,6 +67,7 @@ export default {
       totalPage: 0
     };
   },
+  components: { platformDialog, companyDialog, uploadDialog },
   mounted() {
     this.getDataList();
   },
@@ -95,6 +103,38 @@ export default {
     currentChangeHandle(val) {
       this.pageIndex = val;
       this.getDataList();
+    },
+    // 上传
+    handleUpload() {
+      this.$refs.upload.init();
+    },
+    //新增公司
+    handleAddCom(){
+      this.$refs.company.init();
+    },
+    // 新增平台
+    handleAdd(e) {
+      console.log(e)
+      this.$refs.platform.init(e);
+    },
+    handleDel(e) {
+      this.$confirm("确认删除该平台信息?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          this.$message({
+            type: "success",
+            message: "删除成功!"
+          });
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "已取消删除"
+          });
+        });
     }
   }
 };

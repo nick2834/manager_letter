@@ -13,7 +13,8 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
 }
 var message = Mock.mock({
   "onpending|1-100": 100,
-  "newMsg|1-100": 100
+  "onreview|1-100": 100,
+  "newMsg|1-100": 100,
 })
 // 获取定时任务列表
 export function message() {

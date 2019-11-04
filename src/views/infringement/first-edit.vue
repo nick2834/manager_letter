@@ -84,7 +84,7 @@ export default {
 };
 </script>
 
-<style lang='scss' scope>
+<style lang='scss' scoped>
 .sub_title {
   display: inline-block;
   font-weight: 700;

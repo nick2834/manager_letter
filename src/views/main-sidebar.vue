@@ -13,7 +13,7 @@
         </el-menu-item>
         <el-submenu index="infringement">
           <template slot="title">
-            <icon-svg name="shoucang" class="site-sidebar__menu-icon"></icon-svg>
+            <icon-svg name="daohang" class="site-sidebar__menu-icon"></icon-svg>
             <span>侵权中心</span>
           </template>
           <el-menu-item index="infringement-article-legal" @click="$router.push({ name: 'infringement-article-legal' })">
@@ -27,7 +27,7 @@
         </el-submenu>
         <el-submenu index="defend">
           <template slot="title">
-            <icon-svg name="shoucang" class="site-sidebar__menu-icon"></icon-svg>
+            <icon-svg name="weihu" class="site-sidebar__menu-icon"></icon-svg>
             <span>信息维护</span>
           </template>
           <el-menu-item index="defend-lawyer" @click="$router.push({ name: 'defend-lawyer' })">
@@ -49,7 +49,7 @@
         </el-submenu>
         <el-submenu index="setting">
           <template slot="title">
-            <icon-svg name="system" class="site-sidebar__menu-icon"></icon-svg>
+            <icon-svg name="shezhi" class="site-sidebar__menu-icon"></icon-svg>
             <span>设置</span>
           </template>
           <el-menu-item index="setting-mould" @click="$router.push({ name: 'setting-mould' })">
@@ -67,7 +67,7 @@
         </el-submenu>
         <el-submenu index="statistics">
           <template slot="title">
-            <icon-svg name="system" class="site-sidebar__menu-icon"></icon-svg>
+            <icon-svg name="config" class="site-sidebar__menu-icon"></icon-svg>
             <span>统计</span>
           </template>
           <el-menu-item index="statistics-data" @click="$router.push({ name: 'statistics-data' })">

@@ -204,9 +204,11 @@ img {
 
     &-lg,
     &-mini {
-      margin: 0 5px;
+      // margin: 0 5px;
+      margin: 0;
       color: #fff;
-
+      display: block;
+      height: 100%;
       &:focus,
       &:hover {
         color: #fff;

@@ -9,6 +9,10 @@
             <div class="m_body">{{message.onpending}}</div>
           </li>
           <li>
+            <div class="m_head">待审核</div>
+            <div class="m_body">{{message.onreview}}</div>
+          </li>
+          <li>
             <div class="m_head">新消息</div>
             <div class="m_body">{{message.newMsg}}</div>
           </li>

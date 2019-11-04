@@ -4,7 +4,8 @@
       <div class="site-content">
         <div class="login-main">
           <h3 class="login-title">
-            <img class="logo" src="~@/assets/img/login_logo.png" alt />发函管理系统
+            <img class="logo" src="~@/assets/img/login_logo.png" alt />
+            <!-- <img class="logo" src="~@/assets/img/logo_text.png" alt /> -->
           </h3>
           <login-component v-if="isLogin" @isforgot="isforgot" @isregist="isregist"></login-component>
           <regist-component v-if="isRegist" @backlogin="backlogin"></regist-component>
@@ -89,7 +90,8 @@ export default {
     right: 0;
     left: 0;
     margin: 0 auto;
-    padding: 150px 60px 180px;
+    // padding: 150px 60px 180px;
+    padding: 150px 55px 180px;
     width: 470px;
     min-height: 100%;
     // background-color: #fff;
@@ -101,8 +103,9 @@ export default {
     line-height: 80px;
     height: 80px;
     img {
-      width: 80px;
-      height: 80px;
+      width: 75%;
+      // width: 80px;
+      height: auto;
       vertical-align: top;
     }
   }

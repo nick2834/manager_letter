@@ -5,10 +5,13 @@ var lawyerList = []
 for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
   lawyerList.push(Mock.mock({
     'id': '@increment',
-    'name': '@name',
+    'name': '@cname',
     'agency': '@ctitle(3, 5)', //网络平台
+    'idCard': '@guid',
     'mobile': /^1[0-9]{10}$/,
     'address': '北京市海淀区知春路甲48号2号楼10A室', //网络平台
+    'letter': ["@image('200x100', '#FF6600')"],
+    'status': '@boolean()'
   }))
 }
 var paltList = []

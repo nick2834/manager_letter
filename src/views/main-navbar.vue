@@ -3,10 +3,12 @@
     <div class="site-navbar__header">
       <h1 class="site-navbar__brand" @click="$router.push({ name: 'home' })">
         <a class="site-navbar__brand-lg" href="javascript:;">
-          <img class="logo" src="~@/assets/img/logo.png" alt style="margin-top:5px" />
-          <span>发函管理系统</span>
+          <!-- <img class="logo" src="~@/assets/img/logo.png" alt style="margin-top:5px" />
+          <span>发函管理系统</span> -->
+          <img src="~@/assets/img/login_logo.png" class="logo_text" alt="腾讯法务">
         </a>
         <a class="site-navbar__brand-mini" href="javascript:;">
+          <!-- <img class="logo" src="~@/assets/img/logo.png" alt style="margin-top:5px" /> -->
           <img class="logo" src="~@/assets/img/logo.png" alt style="margin-top:5px" />
         </a>
       </h1>
@@ -128,6 +130,9 @@ export default {
 };
 </script>
 <style lang="scss" scope>
+.logo_text{
+  width: 80%;
+}
 .logo {
   width: 55px;
   height: 55px;
